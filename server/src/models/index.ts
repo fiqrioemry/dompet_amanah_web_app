@@ -12,7 +12,10 @@ const db: { [key: string]: any } = {};
 let sequelize: Sequelize;
 
 if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable] as string, config);
+  sequelize = new Sequelize(
+    process.env[config.use_env_variable] as string,
+    config
+  );
 } else {
   sequelize = new Sequelize(
     config.database,
@@ -32,7 +35,10 @@ fs.readdirSync(__dirname)
     );
   })
   .forEach((file) => {
-    const model = require(path.join(__dirname, file)).default(sequelize, DataTypes);
+    const model = require(path.join(__dirname, file)).default(
+      sequelize,
+      DataTypes
+    );
     db[model.name] = model;
   });
 

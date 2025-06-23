@@ -4,8 +4,9 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 
 import errorHandler from "./errors/errorHandler";
-import initRoutes from "./routes/route";
+
 import limiter from "./middlewares/limiter.middleware";
+import initRoutes from "./routes/route";
 
 dotenv.config();
 
