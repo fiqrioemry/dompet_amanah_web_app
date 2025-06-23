@@ -1,6 +1,6 @@
 // src/config/database.ts
 import dotenv from "dotenv";
-import { DBConfig } from "../lib/types";
+import { DBConfig } from "../types/types";
 
 dotenv.config();
 

@@ -29,6 +29,10 @@ export default (sequelize: Sequelize) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
+      image_url: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
       collected_amount: {
         type: DataTypes.INTEGER,
         allowNull: false,

@@ -1,12 +1,10 @@
 import dotenv from "dotenv";
-import express, { Application } from "express";
 import cors from "cors";
-import cookieParser from "cookie-parser";
-
-import errorHandler from "./errors/errorHandler";
-
-import limiter from "./middlewares/limiter.middleware";
 import initRoutes from "./routes/route";
+import cookieParser from "cookie-parser";
+import express, { Application } from "express";
+import errorHandler from "./errors/errorHandler";
+import limiter from "./middlewares/limiter.middleware";
 
 dotenv.config();
 
